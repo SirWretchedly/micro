@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildTurret : MonoBehaviour
+public class BuildItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject item;
+    public GameObject spawner;
 
-    // Update is called once per frame
-    void Update()
+    private GameObject instance;
+
+    private void OnMouseDown()
     {
-        
+        instance = GameObject.Instantiate(item, spawner.transform.position, spawner.transform.rotation);
+        instance.transform.position = instance.transform.position + new Vector3(0, 0, 0.001f);
+        instance.GetComponent<SpriteRenderer>().sortingOrder = -1;
     }
 }
