@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReturnObject : MonoBehaviour
 {
     public bool closed;
+    public float distance;
 
     private Vector3 parent;
 
@@ -15,7 +16,7 @@ public class ReturnObject : MonoBehaviour
 
     void Update()
     {
-        if(closed == true && Vector3.Distance(transform.position, parent) > 1.5)
+        if(closed == true && Vector3.Distance(transform.position, parent) > distance)
         {
             transform.position = parent;
         }

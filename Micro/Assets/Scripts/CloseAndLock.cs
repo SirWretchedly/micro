@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CloseAndLock : MonoBehaviour
 {
+    public Sprite locked;
+
     private void OnMouseDown()
     {
         foreach (DriveRotate drive in transform.parent.gameObject.GetComponentsInChildren<DriveRotate>())
         {
             drive.locked = true;
         }
-        transform.parent.Find("Lock").transform.rotation = new Quaternion(0, 0, 0, 0);
+        transform.parent.Find("Lock").GetComponent<Image>().sprite = locked;
         StartCoroutine(waitAndQuit());
     }
 
