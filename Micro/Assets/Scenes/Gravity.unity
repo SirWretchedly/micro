@@ -254,6 +254,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locked: {fileID: 6538409787245071395, guid: c1425956917096845aedd66c2ef677c4, type: 3}
+  buttonUp: {fileID: -3243065930256096816, guid: caaf255bebab9734ab8c94d29441d64f,
+    type: 3}
+  buttonDown: {fileID: -5316896731886317114, guid: caaf255bebab9734ab8c94d29441d64f,
+    type: 3}
 --- !u!61 &96037610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1064,6 +1068,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba39aafdee274f14c9bca20735b44888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonUp: {fileID: -3243065930256096816, guid: caaf255bebab9734ab8c94d29441d64f,
+    type: 3}
+  buttonDown: {fileID: -5316896731886317114, guid: caaf255bebab9734ab8c94d29441d64f,
+    type: 3}
 --- !u!61 &1671052502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1341,7 +1349,6 @@ GameObject:
   - component: {fileID: 2136611676}
   - component: {fileID: 2136611675}
   - component: {fileID: 2136611674}
-  - component: {fileID: 2136611673}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1349,18 +1356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2136611673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136611672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4cf8e448e333c41b9718ee8aeca4f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2136611674
 MonoBehaviour:
   m_ObjectHideFlags: 0
