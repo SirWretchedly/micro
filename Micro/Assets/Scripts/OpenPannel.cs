@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class OpenPannel : MonoBehaviour
 {
-    private GameObject pannel;
-
-    private void Start()
-    {
-        pannel = transform.parent.gameObject.transform.Find("Pannel").gameObject;
-    }
+    public GameObject pannel;
 
     private void OnMouseDown()
     {
