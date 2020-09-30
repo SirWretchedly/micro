@@ -29,13 +29,16 @@ public class DriveRotate : MonoBehaviour
     {
         mouseDown = false;
         transform.GetComponent<Image>().sprite = buttonUp;
-        if (direction == 1)
+        if(locked == false)
         {
-            car.GetComponent<Animator>().Play("IdleLeft");
-        }
-        else
-        {
-            car.GetComponent<Animator>().Play("IdleRight");
+            if (direction == 1)
+            {
+                car.GetComponent<Animator>().Play("IdleLeft");
+            }
+            else
+            {
+                car.GetComponent<Animator>().Play("IdleRight");
+            }
         }
     }
 

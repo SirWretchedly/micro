@@ -32,7 +32,6 @@ public class MouseDrag : MonoBehaviour
     {
         if (isDragging)
         {
-            Cursor.visible = false;
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePosition);
         }
