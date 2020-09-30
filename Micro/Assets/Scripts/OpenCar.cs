@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenCar : MonoBehaviour
 {
+    public Sprite highlight;
     public GameObject pannel;
 
     private void OnMouseDown()
@@ -12,5 +13,15 @@ public class OpenCar : MonoBehaviour
         {
             pannel.SetActive(true);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        transform.GetComponent<Animator>().SetBool("highlighted", true);
+    }
+
+    private void OnMouseExit()
+    {
+        transform.GetComponent<Animator>().SetBool("highlighted", false);
     }
 }

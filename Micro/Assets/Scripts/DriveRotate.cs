@@ -29,12 +29,28 @@ public class DriveRotate : MonoBehaviour
     {
         mouseDown = false;
         transform.GetComponent<Image>().sprite = buttonUp;
+        if (direction == 1)
+        {
+            car.GetComponent<Animator>().Play("IdleLeft");
+        }
+        else
+        {
+            car.GetComponent<Animator>().Play("IdleRight");
+        }
     }
 
     void Update()
     {
         if(mouseDown == true && locked == false)
         {
+            if(direction == 1)
+            {
+                car.GetComponent<Animator>().Play("DriveLeft");
+            }
+            else
+            {
+                car.GetComponent<Animator>().Play("DriveRight");
+            }
             car.transform.RotateAround(planet.transform.position, new Vector3(0, 0, direction), speed * Time.deltaTime);
         }
     }

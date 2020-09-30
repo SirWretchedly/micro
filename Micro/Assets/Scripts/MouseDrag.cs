@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MouseDrag : MonoBehaviour
 {
+    public int layer;
+
     private bool isDragging;
 
     private void Start()
@@ -14,6 +16,11 @@ public class MouseDrag : MonoBehaviour
     public void OnMouseDown()
     {
         isDragging = true;
+        transform.GetComponent<SpriteRenderer>().sortingOrder = layer + 1;
+        foreach(MouseDrag drag in transform.parent.GetComponentsInChildren<MouseDrag>())
+        {
+            drag.layer = layer + 1;
+        }
     }
 
     public void OnMouseUp()
