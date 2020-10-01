@@ -16,7 +16,11 @@ public class Unlock : MonoBehaviour
             foreach(DriveRotate drive in transform.parent.gameObject.GetComponentsInChildren<DriveRotate>())
             {
                 drive.locked = false;
-            }  
+            }
+            foreach(RotatePlanet drive in transform.parent.gameObject.GetComponentsInChildren<RotatePlanet>())
+            {
+                drive.locked = false;
+            }
         }
     }
 }
